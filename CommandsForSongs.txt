@@ -1,0 +1,46 @@
+
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+pip install pymongo
+python -m pip install requests
+pip install Flask pytest
+docker pull mongo:7
+docker run -d --name songs-mongodb -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=SongsLocal2026 -e MONGO_INITDB_DATABASE=group mongo:7
+docker ps
+docker exec -it mongodb-lab mongosh
+$env:MONGODB_SERVICE="localhost"
+$env:MONGODB_USERNAME="root"
+$env:MONGODB_PASSWORD="SongsLocal2026"
+py app.py
+songs application.
+Invoke-RestMethod http://127.0.0.1:5000/health
+Invoke-RestMethod http://127.0.0.1:5000/count
+Invoke-RestMethod http://127.0.0.1:5000/song/1
+Invoke-RestMethod http://127.0.0.1:5000/song
+$body = @{
+>>     id = 999
+>>     title = "Test Song"
+>>     artist = "Test Artist"
+>> } | ConvertTo-Json
+Invoke-RestMethod -Method POST `
+>>     -Uri http://127.0.0.1:5000/song `
+>>     -ContentType "application/json" `
+>>     -Body $body
+
+Invoke-RestMethod http://127.0.0.1:5000/song/999
+$body = @{
+>>     title = "Updated Test Song"
+>>     artist = "Updated Artist"
+>> } | ConvertTo-Json
+Invoke-RestMethod -Method PUT `
+>>     -Uri http://127.0.0.1:5000/song/999 `
+>>     -ContentType "application/json" `
+>>     -Body $body
+Invoke-RestMethod -Method DELETE `
+>>     -Uri http://127.0.0.1:5000/song/999
+Invoke-RestMethod http://127.0.0.1:5000/song/999
+pytest -v
+
+

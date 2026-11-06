@@ -1,0 +1,29 @@
+(.venv) PS E:\PythonProject\Back-End-Development-Songs\Back-End-Development-Songs> $body = @{
+>>     id = 999
+>>     title = "Test Song"
+>>     artist = "Test Artist"
+>> } | ConvertTo-Json
+(.venv) PS E:\PythonProject\Back-End-Development-Songs\Back-End-Development-Songs>
+(.venv) PS E:\PythonProject\Back-End-Development-Songs\Back-End-Development-Songs> Invoke-RestMethod -Method POST `
+>>     -Uri http://127.0.0.1:5000/song `
+>>     -ContentType "application/json" `
+>>     -Body $body
+
+inserted_id
+-----------
+6aedb6c59aa4b0d61a1854af
+
+(.venv) PS E:\PythonProject\Back-End-Development-Songs\Back-End-Development-Songs> Invoke-RestMethod http://127.0.0.1:5000/song/999
+
+_id                              artist       id title
+---                              ------       -- -----
+@{$oid=6aedb6c59aa4b0d61a1854af} Test Artist 999 Test Song
+
+(.venv) PS E:\PythonProject\Back-End-Development-Songs\Back-End-Development-Songs> Invoke-RestMethod http://127.0.0.1:5000/song/1
+
+_id                              id lyrics
+---                              -- ------
+@{$oid=6aedb56149d0cd24859c673f}  1 Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincid...
+
+
+(.venv) PS E:\PythonProject\Back-End-Development-Songs\Back-End-Development-Songs>

@@ -1,0 +1,13 @@
+(.venv) PS E:\PythonProject\Back-End-Development-Songs\Back-End-Development-Songs> $body = @{
+>>     title = "Updated Test Song"
+>>     artist = "Updated Artist"
+>> } | ConvertTo-Json
+(.venv) PS E:\PythonProject\Back-End-Development-Songs\Back-End-Development-Songs>
+(.venv) PS E:\PythonProject\Back-End-Development-Songs\Back-End-Development-Songs> Invoke-RestMethod -Method PUT `
+>>     -Uri http://127.0.0.1:5000/song/999 `
+>>     -ContentType "application/json" `
+>>     -Body $body
+
+_id                              artist          id title
+---                              ------          -- -----
+@{$oid=6aedb6c59aa4b0d61a1854af} Updated Artist 999 Updated Test Song

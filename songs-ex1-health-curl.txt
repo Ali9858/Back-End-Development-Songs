@@ -1,0 +1,19 @@
+(.venv) PS E:\PythonProject\Back-End-Development-Songs\Back-End-Development-Songs> Invoke-RestMethod http://127.0.0.1:5000/health
+
+status
+------
+OK
+
+(.venv) PS E:\PythonProject\Back-End-Development-Songs\Back-End-Development-Songs> Invoke-RestMethod http://127.0.0.1:5000/count
+
+count
+-----
+   20
+
+
+(.venv) PS E:\PythonProject\Back-End-Development-Songs\Back-End-Development-Songs> Invoke-RestMethod http://127.0.0.1:5000/song
+
+songs
+-----
+{@{_id=; id=1; lyrics=Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis....
+

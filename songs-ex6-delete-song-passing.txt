@@ -1,0 +1,10 @@
+
+(.venv) PS E:\PythonProject\Back-End-Development-Songs\Back-End-Development-Songs> Invoke-RestMethod -Method DELETE `
+>>     -Uri http://127.0.0.1:5000/song/999
+(.venv) PS E:\PythonProject\Back-End-Development-Songs\Back-End-Development-Songs> Invoke-RestMethod http://127.0.0.1:5000/song/999
+Invoke-RestMethod : {"message":"Song with id 999 not found"}
+строка:1 знак:1
++ Invoke-RestMethod http://127.0.0.1:5000/song/999
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-RestMethod], WebException
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
