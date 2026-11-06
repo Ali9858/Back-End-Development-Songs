@@ -5,7 +5,7 @@ Repository created from the provided coding-project-template.
 
 Repository created from the provided template.
 Environment initialized locally.
-Python version: 3.14
+Python version: 3.9.x
 Flask application configured.
 REST API implemented.
 Project Description
@@ -50,7 +50,7 @@ bash
 python -m pytest -v
 
 Technologies Used
-Python 3.14
+Python 3.9.x
 Flask
 REST API
 Pytest
