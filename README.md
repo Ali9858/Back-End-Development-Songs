@@ -63,6 +63,6 @@ The service is designed to communicate with the Django Back-End Development Caps
 
 Author
 
-Ali Bekdari
+Alibek Dari
 
 GitHub: https://github.com/Ali9858
